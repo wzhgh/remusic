@@ -226,6 +226,7 @@ public class DownloadTask implements Runnable {
                     .url(url)
                     .header("RANGE", "bytes=" + completedSize + "-")//  Http value set breakpoints RANGE
                     .addHeader("Referer", url)
+                    .addHeader("user-agent","Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:0.9.4)")
                     .build();
             Log.e("comlesize", completedSize + "");
             file.seek(completedSize);
